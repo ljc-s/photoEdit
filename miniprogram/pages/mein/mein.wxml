@@ -1,0 +1,41 @@
+<scroll-view scroll-y class="scrollPage">
+
+<view class="user-info user-bg">
+  <view class="my-info padding">
+   <view class="my-info-l">
+      <view bindtap="userInfoAuth" class="cu-avatar">
+        <image wx:if="{{authorized}}" mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+        <image wx:else mode="widthFix" src="../../images/noUser.png"></image>
+      </view>
+      <view wx:if="{{!canIUseGetUserProfile}}" class="nickName" >
+          <button wx-if="{{!authorized}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" size="mini">点我登录哦！</button>
+          <text wx-if="{{authorized}}">{{userInfo.nickName}}</text>
+      </view>
+      <view wx:if="{{canIUseGetUserProfile}}" class="nickName" >
+          <button wx-if="{{!authorized}}" bindtap="getUserProfile" class="btn" size="mini">点我登录哦！</button>
+          <text wx-if="{{authorized}}" bindtap="getUserProfile" style="color: white;">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class="my-info-r" wx-if="{{authorized}}">
+      <view wx-if="{{signed}}" class="signIn">今日已签到</view>
+      <view wx-if="{{!signed && !signInLoading && userInfo.openid}}" class="signIn text-yellow text-xl" bindtap="signIn">签到＞</view>
+      <view wx-if="{{signInLoading && !signed}}" class="signIn">签到中...</view>
+    </view>
+  </view>
+</view>
+<view class="user-info-content">
+  <view class="user-info-content-item" bindtap = "getUserFile">
+    <view class="iconfont icon_card user-info-content-item-l"><text style="margin-left:30rpx">我的电子照</text></view>
+    <view class="iconfont icon_arrowR"></view>
+  </view>
+  <view class="user-info-content-item">
+    <view class="iconfont icon_question user-info-content-item-l"><text style="margin-left:30rpx">常见问题</text></view>
+    <view class="iconfont icon_arrowR"></view>
+  </view>
+  <view class="user-info-content-item">
+    <view class="iconfont icon_tip user-info-content-item-l"><text style="margin-left:30rpx">拍摄攻略</text></view>
+    <view class="iconfont icon_arrowR"></view>
+  </view>
+</view>
+
+</scroll-view>

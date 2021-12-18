@@ -1,0 +1,66 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/preImgEdit/preImgEdit",
+          "pathName": "pages/preImgEdit/preImgEdit",
+          "query": "index=0",
+          "scene": null
+        },
+        {
+          "name": "pages/editPhoto/editPhoto",
+          "pathName": "pages/editPhoto/editPhoto",
+          "query": "index=0",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/autoCamera/autoCamera",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/mein/mein",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/editPhoto/complete/complete",
+          "query": "msg=图片像素260 * 378，图片大小36.02kb&tempFilePath=http://tmp/bn8u2Xa5WXVrd980dae9d9423fbf04b206c4a83fecb7.jpg&url=https://6e6f-noco-04nbo-1253571313.tcb.qcloud.la/tmp/imgCompose/o_fns0JknTEtCywrlYRgV0rctuHs/2021-12-10/1639140730469-0.18653771566086075.jpg\"",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/editPhoto/complete/complete",
+          "query": "msg=%E5%9B%BE%E7%89%87%E5%83%8F%E7%B4%A0295%20*%20413%EF%BC%8C%E5%9B%BE%E7%89%87%E5%A4%A7%E5%B0%8F44.98kb&tempFilePath=http%3A%2F%2Ftmp%2FqXCSmUYjl98nb81dd2dfdcf704ae868a7f5a2f1cd549.jpg&url=https%3A%2F%2F6e6f-noco-04nbo-1253571313.tcb.qcloud.la%2Ftmp%2FimgCompose%2Fo_fns0JknTEtCywrlYRgV0rctuHs%2F2021-12-10%2F1639144578523-0.25598459077903835.jpg",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/user-file/user-file",
+          "query": "openid=o_fns0JknTEtCywrlYRgV0rctuHs",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<!-- <scroll-view class="container" scroll-y> -->
+
+<view class="container">
+	<view class="container-head">
+	<swiper autoplay circular indicator-dots indicator-color="rgba(0, 0, 0, .1)" indicator-active-color="#0acaa2">
+		<swiper-item class="swiper-item" wx:for="{{preImgInfoList}}" wx:key="_id">
+			<view class="swiper-img">
+				<image mode="aspectFit" src="{{item.imgUrl}}"></image>
+			</view>
+		</swiper-item>
+	</swiper>
+	</view>
+	<view class="container-comtent">
+		<view class="container-comtent-head">{{photoName}}</view>
+		<view class="container-comtent-dec">
+			<view class="container-comtent-dec-item">
+				<view style="width:40%">像素尺寸：</view>
+				<view>{{px}}</view>
+			</view>
+			<view class="container-comtent-dec-item">
+				<view style="width:40%">冲印尺寸：</view>
+				<view class="dec">{{size}}</view>
+			</view>
+			<view class="container-comtent-dec-item">
+				<view style="width:40%">分辨率：</view>
+				<view class="dec">无要求</view>
+			</view>
+			<!-- <view class="container-comtent-dec-item">
+				<view style="width:40%">颜色可选：</view>
+				<view class="dec colorPick">
+					<view class="circle" style="background: #fff; border:1px solid #ddd;"></view>
+					<view class="circle" style="background: #449df1;"></view>
+					<view class="circle" style="background: #e85452;"></view>
+					<view class="circle" style="background: #494949;"></view>
+				</view>
+			</view> -->
+			<view class="container-comtent-dec-item">
+				<view style="width:40%">照片描述：</view>
+				<view class="dec">{{discription}}</view>
+			</view>
+		</view>
+	</view>
+
+
+<view class="container-optBtn">
+
+	<view bindtap="chooseImagePre" data-type="album" class="container-btn">相册选择</view>
+	<view bindtap="chooseImagePre" data-type="camera" class="container-btn">相机拍照</view>
+</view>
+</view>
+

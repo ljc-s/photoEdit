@@ -1,0 +1,95 @@
+/* miniprogram/pages/mein/mein.wxss */
+.scrollPage {
+  height: 100vh;
+}
+.user-info .cu-avatar {
+	overflow: hidden;
+}
+
+.my-info {
+	width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info .nickName {
+  margin-left: 1em;
+  font-weight: bold;
+  font-size: 50rpx;
+  
+}
+.btn{
+  color: #fff;
+}
+.user-info .signIn {
+	margin-right: 10%;
+  width: 8em;
+  text-align: right;
+  text-shadow: none;
+}
+.my-info-l{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-info-r{
+  min-width: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-bg {
+	background: #0acaa2;
+  height: 280rpx;
+  display: flex;
+  justify-content: center;
+  /* padding-top: 40rpx; */
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.user-bg text {
+  opacity: 0.8;
+}
+
+.user-bg image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100rpx;
+}
+
+.user-bg .gif-wave{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
+}
+
+.user-info-content{
+  width: 90%;
+  height: 400rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 10rpx;
+}
+.user-info-content-item{
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-info-content-item-l{
+  margin-left: 20rpx;
+}

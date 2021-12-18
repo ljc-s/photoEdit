@@ -1,0 +1,85 @@
+/* miniprogram/pages/index/index.wxss */
+.container {
+	background-color: rgb(233, 233, 233);
+	position: relative;
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
+}
+.container-head{
+	width: 100%;
+	height: 600rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: #fff;
+}
+swiper {
+	width: 95%;
+	margin: 10px;
+	height: 300rpx;
+}
+.swiper-item {
+	border-radius: 10px;
+	height: 100%;
+}
+
+/* 轮播样式 */
+.swiper-img{
+	background-color: #fff;
+	position: relative;
+	height: 100%;
+}
+.swiper-img image {
+	width: 100%;
+	height: 100%;
+}
+
+.container-content{
+	width: 95%;
+	height: 100%;
+	margin-top: 20rpx;
+	padding:0 30rpx;
+}
+.container-content-section{
+	width: 100%;
+	padding:0 30rpx;
+	margin-top: 20rpx;
+	/* text-align: left; */
+}
+.icon_huo{
+	color: rgb(248, 164, 37);
+}
+.container-content-section-title{
+	color: #333;
+}
+.container-content-item{
+	background: #fff;
+}
+
+.container-content-item {
+	box-sizing: border-box;
+	width: 100%;
+	height: 200rpx;
+	padding: 25rpx 40rpx;
+	background: #fff;
+	border-radius: 10rpx;
+	position: relative;
+	margin-bottom: 20rpx;
+}
+	.container-content-item .title {
+	font-size: 36rpx;
+}
+	.container-content-item .description {
+	font-size: 25rpx;
+	color: #919191;
+	margin-top: 50rpx;
+}
+	.container-content-item image {
+	position: absolute;
+	width: 100rpx;
+	height: 100rpx;
+	right: 40rpx;
+	top: 36rpx;
+}
+

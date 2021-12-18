@@ -1,0 +1,24 @@
+<!--pages/user-file/user-file.wxml-->
+<view class="container">
+    <view class="container-content" wx:if="{{listShow}}">
+        <view  class="container-content-item" wx:for="{{userFile}}" wx:key="fileID">
+            <view class="itme-img">
+                <image src="{{item.fileID}}" />
+            </view>
+            <view class="itme-img-content">
+                <view class="itme-img-info">
+                    <view class="itme-img-info-t">{{item.photoName}}<text style="margin-left:1em">{{item.imgBcgTip}}</text></view>
+                    <view class="itme-img-info-b">{{item.time}}</view>
+                </view>
+                <view class="itme-img-btn">
+                    <view class="iconfont icon_download" data-fileId="{{item.fileID}}" bindtap = "download"></view>
+                    <view class="iconfont icon_delete" data-id="{{item._id}}" bindtap = "deleteImg"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else class="noData">
+        <view class="iconfont icon_noData"></view>
+        <view >暂无数据，赶紧去制作证件照吧！</view>
+    </view>
+</view>

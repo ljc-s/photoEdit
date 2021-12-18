@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mein/mein",
+    "pages/user-file/user-file",
+    "pages/editPhoto/complete/complete",
+    "pages/preImgEdit/preImgEdit",
+    "pages/editPhoto/editPhoto",
+    "pages/autoCamera/autoCamera"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#333333",
+    "selectedColor": "#0acaa2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/index.png",
+        "selectedIconPath": "./images/index-active.png"
+      },
+      {
+        "pagePath": "pages/mein/mein",
+        "text": "我的",
+        "iconPath": "./images/me.png",
+        "selectedIconPath": "./images/me-active.png"
+      }
+    ]
+  }
+}

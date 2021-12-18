@@ -1,0 +1,25 @@
+<view class="container">
+	<view class="pthto-edit-content">
+		<view class="canvas-view" style="background-color: {{photoBg}};width: {{targetWidth * showScale}}rpx;height: {{targetHeight * showScale}}rpx;">
+			<image 
+				style="width: {{width * showScale}}rpx; height: {{height * showScale}}rpx; left: {{left * showScale}}rpx; top: {{top * showScale}}rpx; transform: translate(-50%, -50%) scale({{ scale }}) rotate({{ rotate }}deg);" 
+				class="people-photo" 
+				src="{{filePath}}"
+				bindload="bindload"
+				>
+				</image>
+		</view>
+	</view>
+	<view class="imgOpt">
+	<view class="colors">
+		<view bindtap="toggleBg" data-color="white" class="color white {{bgc === 'white' ? 'active' : ''}}"><view wx:if="{{bgc === 'white'}}" class="iconfont icon_select"></view></view>
+		<view bindtap="toggleBg" data-color="blue" class="color blue {{bgc === 'blue' ? 'active' : ''}}"><view wx:if="{{bgc === 'blue'}}" class="iconfont icon_select"></view></view>
+		<view bindtap="toggleBg" data-color="red" class="color red {{bgc === 'red' ? 'active' : ''}}"><view wx:if="{{bgc === 'red'}}" class="iconfont icon_select"></view></view>
+		<view bindtap="toggleBg" data-color="blue2" class="color blue2 {{bgc === 'blue2' ? 'active' : ''}}"><view wx:if="{{bgc === 'blue2'}}" class="iconfont icon_select"></view></view>
+	</view>
+
+	<view class="download-view">
+		<button  bindtap="composeImage" type="default">保存电子照</button>
+	</view>
+	</view>
+</view>

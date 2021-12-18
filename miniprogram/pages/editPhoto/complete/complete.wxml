@@ -1,0 +1,20 @@
+<view class="container">
+	<view class="container-content">
+		<view class="container-content-img">
+			<image bindtap="preView" mode="heightFix" src="{{url}}" ></image>
+		</view>
+		<view class="img-msg">
+			{{msg}}
+		</view>
+	</view>
+	<view class="container-opt">
+	    <view class="msg">
+			<view class="iconfont icon_complete"></view>
+			<text>已保存在手机相册</text>
+		</view>
+		<view class="container-opt-btn">
+			<button class="" open-type="share">分享给朋友</button>
+			<button bindtap="contineu" class="">返回首页</button>
+		</view>
+	</view>
+</view>

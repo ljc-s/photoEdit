@@ -25,18 +25,8 @@ Page({
 		const {index,width,height,discription,data} = options
 		if (width && height) {
 			this.setData({px: width + ' * ' + height + '像素', width: +width, height: +height, discription});
-		}else if(data){
-			let newData = JSON.parse(data);
-			console.log("数据------"+newData.width_px);
-			this.setData({ 
-				width:+newData.width_px, 
-				height:+newData.height_px, 
-				px:newData.width_px+" * "+newData.height_px + " 像素", 
-				size:newData.width_mm+" × "+newData.height_mm + " mm", 
-				photoName: "基本信息", 
-				discription: newData.name 
-			});
-		}else{
+		}
+		else{
 			
 			const {width, height, px, size, name, discription} = this.data.photoSizeList[index];
 			this.setData({ width, height, px, size, photoName: name, discription: discription });

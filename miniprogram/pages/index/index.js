@@ -16,10 +16,6 @@ Page({
   onLoad: function (options) {
 		// wx.setNavigationBarTitle({ title: '随心证件照' })
 		this.getBannerList()
-		if (!options.shareOpenid) return
-		// console.log(options.date.trim() === new Date().toDateString().trim())
-		if (options.date.trim() !== new Date().toDateString().trim()) return
-		this.shareSuccess(options.shareOpenid)
 		
 	},
 	//获取标题图片
@@ -27,7 +23,7 @@ Page({
 		wx.showLoading({ title: '加载中', })
 		const that = this
 		const db = wx.cloud.database()
-		db.collection('bannerList').get().then(res => {
+		db.collection('bannerList-simple').get().then(res => {
 			res.data.forEach(e => {
 				e.imgUrl = e.imgUrl.trim()
 			});

@@ -204,17 +204,6 @@ Page({
 
 	// 接收参数
 	receivingParameters () {
-		// let data = {"tmpOriginImgSrc":"https://6e6f-noco-04nbo-1253571313.tcb.qcloud.la/tmp/originfile/o_fns0JknTEtCywrlYRgV0rctuHs/2021-12-11/201eFQs8tFJi81fc9a8d9f8fd13018c3a2a3f4f5e4c5.jpg?imageMogr2/thumbnail/1500x1500%7CimageMogr2/format/jpg","imageDivisionResultFileId":"cloud://noco-04nbo.6e6f-noco-04nbo-1253571313/tmp/imageDivision/o_fns0JknTEtCywrlYRgV0rctuHs/2021-12-11/1639183683695-0.48051656534170006.png","width":260,"height":378,"photoName":"小一寸"}
-		// // let data = {tmpOriginImgSrc: "https://6e6f-noco-04nbo-1253571313.tcb.qcloud.la/t…Mogr2/thumbnail/1500x1500%7CimageMogr2/format/jpg", imageDivisionResultFileId: "cloud://noco-04nbo.6e6f-noco-04nbo-1253571313/tmp/…s/2021-12-09/1639061945056-0.8266014231809276.png", width: 260, height: 378}
-		// const {width, height,  photoName, tmpOriginImgSrc, imageDivisionResultFileId} = data
-		// this.setData({
-		// 	photoName:photoName,
-		// 	targetWidth: width,
-		// 	targetHeight: height,
-		// 	showScale: (480 / (+width)),
-		// 	filePath: imageDivisionResultFileId,
-		// 	tmpOriginImgSrc
-		// })
 		
 		const eventChannel = this.getOpenerEventChannel && this.getOpenerEventChannel()
 		eventChannel && eventChannel.on('acceptDataFromOpenerPage', (data) => {

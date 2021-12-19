@@ -2,10 +2,6 @@
 import './tools/dateFormatter'
 App({
 	onLaunch: function () {
-
-		// 版本检查
-		this.getNewVersion()
-
 		// 初始化云开发
 		wx.cloud.init({
 			resourceEnv: 'noco-04nbo',
@@ -28,34 +24,9 @@ App({
 			}
 		})
 	},
-
-	// 下载最新版本
-	getNewVersion() {
-		const updateManager = wx.getUpdateManager()
-
-		updateManager.onCheckForUpdate(function (res) {
-			// 请求完新版本信息的回调
-			console.log('有新版本：', res.hasUpdate)
-		})
-
-		updateManager.onUpdateReady(function () {
-			wx.showModal({
-				title: '更新提示',
-				content: '新版本已经准备好，是否重启应用？',
-				success(res) {
-					if (res.confirm) {
-						// 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
-						updateManager.applyUpdate()
-					}
-				}
-			})
-		})
-	},
-
 	// 初始化全局数据
 	globalData: {
 		openid: null,
-		groupQrcodeUrl: 'cloud://dev-4iov0.6465-dev-4iov0-1301148496/group-qrcode/qrcode.jpg',
 		photoSizeList: [{
 				name: '一寸',
 				px: '295×413 px',
@@ -105,6 +76,38 @@ App({
 				discription: ''
 			},
 			{
+				name: '结婚证',
+				px: '626x413 px',
+				size: '53 × 35 mm',
+				width: 626,
+				height: 413,
+				discription: '结婚证大二寸双人证件照。'
+			},
+			{
+				name: '一寸半身照',
+				px: '295×413 px',
+				size: '25 × 35 mm',
+				width: 295,
+				height: 413,
+				discription: ''
+			},
+			{
+				name: '二寸半身照',
+				px: '413×579 px',
+				size: '35 × 49 mm',
+				width: 413,
+				height: 579,
+				discription: ''
+			},
+			{
+				name: '教师资格证',
+				px: '295×413 px',
+				size: '25 × 35 mm',
+				width: 295,
+				height: 413,
+				discription: '教师资格证'
+			},
+			{
 				name: '三寸',
 				px: '649×991 px',
 				size: '55 × 84 mm',
@@ -144,38 +147,7 @@ App({
 				height: 413,
 				discription: '健康证'
 			},
-			{
-				name: '结婚证',
-				px: '626x413 px',
-				size: '53 × 35 mm',
-				width: 626,
-				height: 413,
-				discription: '结婚证大二寸双人证件照。'
-			},
-			{
-				name: '一寸半身照',
-				px: '295×413 px',
-				size: '25 × 35 mm',
-				width: 295,
-				height: 413,
-				discription: ''
-			},
-			{
-				name: '二寸半身照',
-				px: '413×579 px',
-				size: '35 × 49 mm',
-				width: 413,
-				height: 579,
-				discription: ''
-			},
-			{
-				name: '教师资格证',
-				px: '295×413 px',
-				size: '25 × 35 mm',
-				width: 295,
-				height: 413,
-				discription: '教师资格证'
-			}
+			
 		]
 	}
 })

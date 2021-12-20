@@ -62,8 +62,8 @@ Page({
 		}
 		this.setData({ signInLoading: true })
 		wx.cloud.callFunction({
-			name: 'useCount',
-			data: {inc: 1, signIn: true}
+			name: 'userSign',
+			data: { signIn: true}
 		}).then(res => {
 			wx.showToast({ title: '签到成功', })
 			this.getUserInfo()

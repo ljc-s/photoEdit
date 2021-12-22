@@ -82,7 +82,7 @@ async function uploadBase64 (base64, openid) {
 	// base64 转为buffer
 	const buffer = Buffer.from(base64, 'base64')
 	// 临时文件名
-	const temFileName = `${db.serverDate()}-${Math.random()}.png`
+	const temFileName = `${Date.now()}-${Math.random()}.png`
 	
 	// 将图片上传到云存储，并拿到文件id
 	return  await cloudUploadFile(`tmp/imgDivision/${openid}/${dayjs().format('YYYY-MM-DD')}/${temFileName}`, buffer)

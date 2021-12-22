@@ -173,8 +173,8 @@ Page({
 	},
 	openConfirm() {
 		wx.showModal({
-		  content: '检测到您没打开图库的写入相册权限，是否打开？',
-		  confirmText: "确认",
+		  content: '检测到您之前没打开相册的写入相册权限，是否去授权？',
+		  confirmText: "去授权",
 		  cancelText: "取消",
 		  success: function (res) {
 			console.log(res);
